@@ -18,6 +18,7 @@ export class Form2Component {
       nota1: new FormControl(''),
       nota2: new FormControl(''),
       nota3: new FormControl(''),
+      nota4: new FormControl(''),
       examen: new FormControl('')
 
     })
@@ -27,13 +28,14 @@ export class Form2Component {
     let nota1=parseInt(this.formulario.value.notas.nota1);
     let nota2=parseInt(this.formulario.value.notas.nota2);
     let nota3=parseInt(this.formulario.value.notas.nota3);
+    let nota4=parseInt(this.formulario.value.notas.nota4);
     let examen=parseInt(this.formulario.value.notas.examen);
 
     if (nota1>=4 && nota2>=4 && nota3>=4 && examen>=4){
-      this.promedio=(((nota1+nota2+nota3)/3)*0.7)+(examen*0.3)
+      this.promedio=(((nota1+nota2+nota3+nota4)/4)*0.7)+(examen*0.3)
       this.salida="Aprobaste con nota "+this.promedio;
     } else {
-      this.promedio=(((nota1+nota2+nota3)/3)*0.7)+(examen*0.3)
+      this.promedio=(((nota1+nota2+nota3+nota4)/4)*0.7)+(examen*0.3)
       this.salida="Reprobaste con nota "+this.promedio;
     }
   }
