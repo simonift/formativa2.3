@@ -1,0 +1,28 @@
+<p>form2 works!</p>
+
+<form [formGroup]="formulario" (ngSubmit)="enviar()">
+  <p>Rut:
+    <input type="text" formControlName="rut">
+  </p>
+  <p>Nombre:
+    <input type="text" formControlName="nombre">
+  </p>
+  <div formGroupName="notas">
+    <p>Nota 1:
+      <input type="text" formControlName="nota1">
+    </p>
+    <p>Nota 2:
+      <input type="text" formControlName="nota2">
+    </p>
+    <p>Nota 3:
+      <input type="text" formControlName="nota3">
+    </p>
+    <p>Examen:
+      <input type="text" formControlName="examen">
+    </p>
+    <p><button type="submit">Enviar</button></p>
+  </div>
+</form>
+<div>
+  <p>Resultado:{{salida}}</p>
+</div>
